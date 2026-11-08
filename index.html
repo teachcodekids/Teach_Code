@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>คลังคู่มือ Coding · Teach Code</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f2ef;color:#242321;font:16px/1.55 system-ui,sans-serif}main{max-width:1280px;margin:auto;padding:24px clamp(14px,4vw,48px)}h1{margin:0 0 16px;font-size:clamp(1.3rem,3vw,2rem)}button,input,select{font:inherit}button,select{cursor:pointer}button,input,select{border:1px solid #ccc5be;border-radius:10px;background:white;color:inherit;padding:9px 12px}button:hover{border-color:#237b70}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #21877c;outline-offset:2px}.search,.toolbar,.price-line{display:flex;align-items:center;gap:12px}.search input{width:100%;min-width:0}.green{background:#287d73;color:white;border-color:#287d73;white-space:nowrap}.toolbar{justify-content:space-between;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid #ded8d1;margin-bottom:22px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{min-width:0;border:1px solid #dfd9d2;border-radius:14px;overflow:hidden;background:white;text-align:left;padding:0;display:flex;flex-direction:column}.card:hover{box-shadow:0 6px 22px #2221}.cover{position:relative;width:100%;background:#ebe7e0}.cover img{display:block;width:100%;aspect-ratio:1055/1491;object-fit:contain}.badge{position:absolute;top:9px;right:9px;background:#ebfff9;color:#145b50;font-size:.75rem;font-weight:800;border-radius:6px;padding:3px 8px}.info{display:flex;flex-direction:column;align-items:flex-start;padding:14px;flex:1;gap:5px}.info small,.muted{color:#68615b}.chip{font-size:.78rem;background:#f4f2ef;border:1px solid #ded8d1;border-radius:6px;padding:2px 7px;display:inline-block}.price{color:#187469;font-weight:850;font-size:1.23rem}.info .price{margin-top:auto;padding-top:7px}.empty{padding:20px 0}
+dialog{padding:0;border:0;border-radius:16px;width:min(1080px,95vw);max-height:94dvh;color:inherit}dialog::backdrop{background:#25242388}.closebar{position:sticky;top:0;background:#fff;z-index:1;border-bottom:1px solid #e0d9d2;padding:8px 15px}.closebar button{color:#166d61}.detail{display:grid;grid-template-columns:minmax(0,44fr) minmax(0,56fr);gap:24px;padding:18px}.stage{display:grid;place-items:center;background:#f5f3ef;border-radius:12px;overflow:hidden;aspect-ratio:1}.stage img{display:block;width:100%;height:100%;min-height:0;object-fit:contain}.thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}.thumbs button{padding:2px;overflow:hidden;aspect-ratio:1}.thumbs img{width:100%;height:100%;object-fit:contain;display:block}.thumbs button[aria-pressed=true]{border:2px solid #20877a;background:#edf9f6}.full{display:inline-block;margin-top:10px;color:#166d61}.price-line{justify-content:space-between;align-items:flex-start}.price-line h2{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem)}.price-line .price{white-space:nowrap}.description{border:1px solid #ded8d1;background:#fcfbfa;border-radius:10px;padding:12px 15px;margin-top:16px}.description h3,.includes h3{margin:0 0 5px;font-size:1rem}.description p{margin:0}.includes{margin-top:14px;border:1px solid #bbdfd6;background:#edf9f6;border-radius:10px;padding:12px 15px}.includes ul{padding-left:22px;margin:5px 0 0}.includes li+li{margin-top:5px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.detail{grid-template-columns:1fr;gap:16px;padding:12px}.stage{aspect-ratio:4/3}.info{padding:10px}.grid{gap:10px}}
+.packages{margin:30px 0 8px;padding:clamp(16px,3vw,32px);border:1px solid #d3e7df;border-radius:20px;background:radial-gradient(ellipse at top right,#d6efe8,transparent 70%),#fafdfa}
+.packages h2{margin:0;color:#183e36;font-size:clamp(1.25rem,3vw,1.8rem)}
+.packages p{margin:8px 0 0;color:#425d56}
+.tiers{list-style:none;margin:20px 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tiers li{display:grid;gap:4px;padding:clamp(10px,2vw,20px);background:white;border:1px solid #d9e8e2;border-radius:13px}
+.tiers strong{color:#176b5f;font-size:clamp(1.1rem,3vw,1.65rem);white-space:nowrap}
+.tiers li:last-child{background:#216d61;color:white;border-color:#216d61}
+.tiers li:last-child strong{color:white}
+.package-contact{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding-top:14px;border-top:1px solid #d3e7df}
+.package-contact a{display:inline-block;background:#216d61;color:white;border-radius:9px;padding:8px 12px;font-weight:750;text-decoration:none}
+@media(max-width:650px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
+.home-banner{display:block;width:100%;height:auto;margin-bottom:24px;border:1px solid #f0d9bf;border-radius:18px;box-shadow:0 8px 24px #9e633115}
+body{background:#fff8ee;color:#10264b}
+.card,.toolbar,.description,.closebar{border-color:#eedcc6}
+.cover,.stage,.chip,.description{background:#fff4e6}
+.chip,button,input,select{border-color:#dfc9b1}
+.info small,.muted{color:#665745}
+.green,.package-contact a{background:#122b55;border-color:#122b55}
+.price,.tiers strong{color:#b74706}
+.badge{background:#ffdfb5;color:#813103}
+.packages{background:radial-gradient(ellipse at top right,#ffe2c2,transparent 72%),#fffaf2;border-color:#eedcc6}
+.packages h2{color:#10264b}
+.packages p{color:#534638}
+.tiers li,.package-contact{border-color:#eedcc6}
+.tiers li:last-child{background:#122b55;border-color:#122b55}
+.tiers li:last-child strong{color:#ffd4a3}
+.includes{background:#fff3e4;border-color:#f2d5b4}
+.closebar button,.full{color:#122b55}
+.thumbs button[aria-pressed=true]{background:#fff1dd;border-color:#bd510d}
+button:hover{border-color:#bd510d}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline-color:#bd510d}
+@media(max-width:620px){.home-banner{margin-bottom:16px;border-radius:10px}}
+</style>
+</head>
+<body>
+<main>
+<img class="home-banner" src="coding-ai-banner.webp" width="2048" height="682" alt="Teach Code คู่มือ Coding &amp; AI 4 ชุดการเรียนรู้ ได้แก่ Scratch Game, Scratch AI, Basic Python และ Python 10 Projects">
+<h1>คลังคู่มือ Coding <span class="chip">TEACH CODE</span></h1>
+<form class="search" id="search"><input type="search" id="query" aria-label="ค้นหาคู่มือ" placeholder="ค้นหาชื่อคู่มือ หรือหัวข้อที่สนใจ"><button class="green">ค้นหา</button></form>
+<div class="toolbar"><label>หมวดหมู่ <select id="category"><option value="">ทั้งหมด</option><option>Scratch</option><option>Python</option></select></label><label>เรียงตาม <select id="sort"><option value="default">ลำดับชุด</option><option value="new">ใหม่ล่าสุด</option><option value="name">ชื่อคู่มือ</option></select></label></div>
+<section class="grid" id="catalog" aria-label="รายการคู่มือ"></section>
+<p class="empty" id="empty" hidden>ไม่พบคู่มือที่ตรงกับการค้นหา</p>
+<section class="packages" aria-labelledby="packages-title">
+<h2 id="packages-title">📦 เลือกชุดให้เหมาะกับพื้นฐานของผู้เรียน</h2>
+<p>สำหรับคุณครู ผู้ปกครอง และเด็กอายุ 7–15 ปี ใช้ฝึกเองหรือจัดกิจกรรมในห้องเรียนได้ค่ะ</p>
+<ul class="tiers">
+<li><span>เลือก 1 ชุด</span><strong>98 บาท</strong></li>
+<li><span>เลือก 2 ชุด</span><strong>179 บาท</strong></li>
+<li><span>เลือก 3 ชุด</span><strong>249 บาท</strong></li>
+<li><span>ครบ 4 ชุด</span><strong>309 บาท</strong></li>
+</ul>
+<div class="package-contact"><span>📲 สนใจสอบถามหรือสั่งซื้อ ทักแชตหรือแอดไลน์</span><a href="https://line.me/R/ti/p/%40Teachcode" target="_blank" rel="noopener">LINE @Teachcode</a><small>(มี @)</small></div>
+</section>
+</main>
+<dialog id="preview" aria-labelledby="title">
+<div class="closebar"><form method="dialog"><button autofocus>← ปิด</button></form></div>
+<div class="detail">
+<section aria-label="ปกและภาพตัวอย่าง"><a class="stage" id="stage" target="_blank" rel="noopener" aria-label="เปิดภาพขนาดเต็ม"><img id="large" alt=""></a><div class="thumbs" id="thumbs"></div><a class="full" id="full" target="_blank" rel="noopener">เปิดภาพขนาดเต็ม ↗</a></section>
+<section><div class="price-line"><h2 id="title"></h2><span class="price">98 บาท</span></div><p id="subtitle"></p><span class="chip" id="tag"></span>
+<div class="description"><h3>รายละเอียด</h3><p id="description"></p></div>
+<div class="includes"><h3>สิ่งที่ได้รับ</h3><ul id="includes"></ul></div></section>
+</div>
+</dialog>
+<script>
+const scratchFiles = ['ไฟล์ Scratch ฉบับนักเรียน สำหรับลงมือเขียนโปรแกรม','คู่มือการเขียนโปรแกรม PDF','ใบงานกิจกรรม (Worksheet)'];
+const guides = [
+ {id:'game',category:'Scratch',name:'Scratch Game',samples:[1,2,3],subtitle:'ฝึกสร้างเกมด้วย Scratch ผ่าน 10 โปรเจกต์',description:'เริ่มจากการใช้บล็อกคำสั่งพื้นฐาน ฝึกเรียงลำดับคำสั่งและใช้เงื่อนไขควบคุมเกม จากนั้นลองปรับกติกาและต่อยอดเกมด้วยไอเดียของตัวเอง',files:['ไฟล์เกม Scratch ฉบับสมบูรณ์ สำหรับทดลองเล่นและดูตัวอย่างโค้ด',...scratchFiles]},
+ {id:'ai',category:'Scratch',name:'Scratch AI',samples:[4,5,6],subtitle:'ทดลองใช้ AI สร้างเกมโต้ตอบผ่าน 10 โปรเจกต์',description:'ฝึกใช้การตรวจจับใบหน้า (Face Sensing) การตรวจจับมือ (Hand Sensing) และการรับรู้อารมณ์ (Emotion Recognition) แล้วนำผลที่ตรวจจับได้มาใช้กำหนดการตอบสนองของตัวละครหรือเกมใน Scratch',files:['ไฟล์โปรเจกต์ Scratch ฉบับสมบูรณ์ สำหรับทดลองและศึกษาโค้ด',...scratchFiles]},
+ {id:'basic',category:'Python',name:'Basic Python',samples:[7,8],subtitle:'ปูพื้นฐาน Python ด้วย 15 บทเรียน และ 15 ภารกิจ',description:'เรียนรู้คำสั่งพื้นฐานทีละขั้นจากตัวอย่างโค้ด แล้วลงมือเขียนและรันโปรแกรมผ่านภารกิจของแต่ละบท ฝึกอ่านผลลัพธ์และแก้ไขข้อผิดพลาด เหมาะกับผู้เริ่มต้นเรียน Python',files:['ไฟล์บทเรียนครบ 15 บท พร้อมตัวอย่างและภารกิจฝึกเขียนโปรแกรม','ไฟล์เฉลยภารกิจ สำหรับตรวจคำตอบและทบทวนวิธีเขียนโค้ด']},
+ {id:'projects',category:'Python',name:'Python 10 Projects',samples:[9,10,11],isNew:true,subtitle:'ลงมือเขียน 10 มินิโปรเจกต์ด้วย Python',description:'ฝึกทำโปรแกรมจำลองงานร้านค้าและงานบริการ เช่น โปรแกรมคำนวณค่าจัดส่ง ระบบคิดค่าจอดรถ และเครื่องคิดเงินร้านค้า',files:['คู่มือครบทั้ง 10 โปรเจกต์','เว็บฝึกเขียนและรันโค้ด']}
+];
+const get = id => document.getElementById(id);
+const catalog = get('catalog');
+const preview = get('preview');
+let images = [];
+function render() {
+ const query = get('query').value.trim().toLowerCase();
+ const category = get('category').value;
+ const list = guides.filter(g => (!category || g.category === category) &&
+ [g.name,g.subtitle,g.description,g.id === 'basic' ? 'Python Basic' : ''].join(' ').toLowerCase().includes(query));
+ if (get('sort').value === 'name') list.sort((a,b) => a.name.localeCompare(b.name));
+ if (get('sort').value === 'new') list.sort((a,b) => Number(Boolean(b.isNew)) - Number(Boolean(a.isNew)));
+ get('empty').hidden = list.length > 0;
+ catalog.innerHTML = list.map(g => `
+  <button class="card" type="button" data-guide="${g.id}">
+   <span class="cover"><img src="${g.id}.webp" alt="">${g.isNew ? '<span class="badge">NEW</span>' : ''}</span>
+   <span class="info"><strong>${g.name}</strong><small>โดย Teach Code</small><span class="chip">${g.category}</span><span class="price">98 บาท</span><small>ดูรายละเอียดและตัวอย่าง →</small></span>
+  </button>`).join('');
+}
+function selectImage(index) {
+ const item = images[index];
+ get('large').src = item.path;
+ get('large').alt = item.label;
+ get('stage').href = item.path;
+ get('full').href = item.path;
+ for (const button of get('thumbs').children) button.setAttribute('aria-pressed', Number(button.dataset.image) === index);
+}
+catalog.addEventListener('click', event => {
+ const card = event.target.closest('[data-guide]');
+ if (!card) return;
+ const guide = guides.find(g => g.id === card.dataset.guide);
+ get('title').textContent = 'ชุดที่ ' + (guides.indexOf(guide) + 1) + ' | ' + guide.name;
+ get('subtitle').textContent = guide.subtitle;
+ get('tag').textContent = guide.category;
+ get('description').textContent = guide.description;
+ get('includes').innerHTML = guide.files.map(file => `<li>${file}</li>`).join('');
+ images = [{path:guide.id + '.webp',label:'ปกคู่มือ ' + guide.name},...guide.samples.map(n => {
+  const number = String(n).padStart(2,'0');
+  return {path:'samples/' + number + '.webp',label:'ภาพตัวอย่าง ' + number + ' ของ ' + guide.name};
+ })];
+ get('thumbs').innerHTML = images.map((item,index) => `<button type="button" data-image="${index}" aria-label="${item.label}"><img src="${item.path}" alt=""></button>`).join('');
+ selectImage(0);
+ preview.showModal();
+ preview.scrollTop = 0;
+});
+get('thumbs').addEventListener('click', event => {
+ const button = event.target.closest('[data-image]');
+ if (button) selectImage(Number(button.dataset.image));
+});
+get('search').addEventListener('submit', event => {event.preventDefault();render()});
+get('query').addEventListener('input', render);
+get('category').addEventListener('change',render);
+get('sort').addEventListener('change',render);
+render();
+</script>
+</body>
+</html>
